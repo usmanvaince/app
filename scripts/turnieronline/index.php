@@ -162,6 +162,36 @@ if ( $action == "tabelle" ):
             </div>
         </div>
     </section>
+    <div class="custom_dropDown">
+        <button onclick="openDropDown()" class="dropbtn">
+            <span>
+              Navigation
+            </span>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <?php
+            if ( getTurniermodusIDVonTurniereID( $turniere_id ) == 1 ) {
+                for ($i = 1; $i <= countGruppenVonTurniereID($turniere_id); $i++):
+                    ?>
+                    <a href="../turniertabelle/index.php?turnier=<?= $turniere_id ?>&gruppe=<?= $i ?>">Gruppe <?= $i ?></a>
+                <?php
+                endfor;
+            }
+            else if( getTurniermodusIDVonTurniereID( $turniere_id ) == 2 ){ ?>
+                <div class="row">
+                    <?php
+                    for ( $i = 1; $i <= countGruppenVonTurniereID( getTurniergruppenphaseIDVonTurniereID( $turniere_id ) ); $i ++ ): ?>
+                        <div class="col-md-6">
+                            <a href="../turniertabelle/index.php?turnier=<?= getTurniergruppenphaseIDVonTurniereID( $turniere_id ) ?>&gruppe=<?= $i ?>">Gruppe <?= $i ?>
+                            </a>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            <?php } ?>
+        </div>
+        <img id="caret_up" class="caret_down" src="<?php echo $domain ?>templates/assets/img/caret-down.png">
+        <img id="caret_down" class="caret_down" src="<?php echo $domain ?>templates/assets/img/caret-arrow-up.png"
+    </div>
     <section class="content">
     <div class="container">
 
@@ -261,11 +291,10 @@ if ( $action == "tabelle" ):
                 <div class="box table-responsive paarungen">
                     <h2><?= getTurnierrundenname( getTurnierrundenteilnehmerVonTurniereID( $turniere_id, $i ), $turniere_id, $i ) ?></h2>
                     <table class="table table-bordered">
-                        <tr>
+                        <tr class="mobile-center">
                             <td>Info</td>
-                            <td>HEIM</td>
+                            <td class="align-l p-l-20">Spielpaarung</td>
                             <td>Erg.</td>
-                            <td>GAST</td>
                         </tr>
 						<?php
 						$query = mysqli_query( $connection, "SELECT turnierspiele_id, team_heim, team_gast, tore_heim, tore_gast, spielinfo, spielort, datum FROM b_spiele WHERE turniere_id = '$turniere_id' AND spieltag = '$i' ORDER BY turnierspiele_id ASC" );
@@ -282,12 +311,25 @@ if ( $action == "tabelle" ):
                                 <td>
                                     # <strong><?= $db->turnierspiele_id ?></strong>
                                 </td>
-                                <td><?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_heim ) ?></td>
                                 <td>
-                                    <b><?= $db->tore_heim ?> : <?= $db->tore_gast ?></b>
+                                    <div>
+                                        <?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_heim ) ?>
+                                    </div>
+                                    <div>
+                                        <?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_gast ) ?>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div>
+                                        <b><?= $db->tore_heim ?></b>
+                                    </div>
+                                    <div>
+                                      <b><?= $db->tore_gast ?></b>
+                                    </div>
+
 									<?= $spielinfo ?>
                                 </td>
-                                <td><?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_gast ) ?></td>
                             </tr>
 						<?php
 						endwhile;
@@ -302,11 +344,10 @@ if ( $action == "tabelle" ):
                 <div class="box table-responsive paarungen">
                     <h2><?= getTurnierrundenname( getTurnierrundenteilnehmerVonTurniereID( $turniere_id, $i ), $turniere_id, $i ) ?></h2>
                     <table class="table table-bordered">
-                        <tr>
-                            <td>Info<br>
-                            <td>HEIM</td>
+                        <tr class="mobile-center">
+                            <td>Info</td>
+                            <td class="align-l p-l-20">Spielpaarung</td>
                             <td>Erg.</td>
-                            <td>GAST</td>
                         </tr>
 						<?php
 						$query = mysqli_query( $connection, "SELECT turnierspiele_id, team_heim, team_gast, tore_heim, tore_gast, spielinfo, spielort, datum FROM b_spiele WHERE turniere_id = '$turniere_id' AND spieltag = '$i' ORDER BY turnierspiele_id ASC" );
@@ -331,12 +372,23 @@ if ( $action == "tabelle" ):
                                     <strong><?= $db->spielort ?></strong><br>
                                     # <strong><?= $db->turnierspiele_id ?></strong>
                                 </td>
-                                <td><?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_heim ) ?></td>
-                                <td>
-                                    <b><?= $db->tore_heim ?> : <?= $db->tore_gast ?></b>
-									<?= $spielinfo ?>
+                                <td class="align-l p-l-20">
+                                    <div>
+                                        <?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_heim ) ?>
+                                    </div>
+                                    <div>
+                                        <?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_gast ) ?>
+                                    </div>
                                 </td>
-                                <td><?= getTurnierteamVonTurnierteamID( $turniere_id, $db->team_gast ) ?></td>
+                                <td>
+                                    <div>
+                                        <b><?= $db->tore_heim ?></b>
+                                    </div>
+                                    <div>
+                                        <b><?= $db->tore_gast ?></b>
+                                    </div>
+
+                                </td>
                             </tr>
 						<?php
 						endwhile;

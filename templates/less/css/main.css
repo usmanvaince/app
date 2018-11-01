@@ -246,7 +246,6 @@ section.full_width .container {
   border: none !important;
 }
 .paarungen tr td:first-of-type {
-  background-color: #333;
   color: #FFF;
   text-align: center;
 }
@@ -260,9 +259,6 @@ section.full_width .container {
   width: 50px !important;
   min-width: 50px !important;
   padding-left: 4px !important;
-}
-.paarungen tr td:nth-of-type(2) {
-  text-align: right;
 }
 .paarungen tr td:nth-of-type(3) {
   text-align: center;

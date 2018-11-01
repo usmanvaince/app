@@ -158,8 +158,12 @@ require_once "../../templates/header.php";
                     <?php endfor; ?>
                 </div>
             <?php } ?>
-        </>
+         </div>
+        <img id="caret_up" class="caret_down" src="<?php echo $domain ?>templates/assets/img/caret-down.png">
+        <img id="caret_down" class="caret_down" src="<?php echo $domain ?>templates/assets/img/caret-arrow-up.png"
     </div>
+
+
     <section class="content">
         <div class="container">
             <div class="row">
@@ -176,9 +180,8 @@ require_once "../../templates/header.php";
             <table class="table table-bordered paarungen shadow_box">
                 <tr class="mobile-center">
                     <td>Info</td>
-                    <td>HEIM</td>
+                    <td class="align-l p-l-20">Spielpaarung</td>
                     <td>Erg.</td>
-                    <td>GAST</td>
                 </tr>
                 <?php
                 $query = mysqli_query($connection,"SELECT turnierspiele_id, spieltag, team_heim, team_gast, tore_heim, tore_gast, spielort, datum FROM b_spiele WHERE turniere_id = '$turniere_id' AND gruppe = '$gruppe' ORDER BY spiele_id ASC");
@@ -188,12 +191,15 @@ require_once "../../templates/header.php";
                         <td>
                            # <strong><?=$db->turnierspiele_id?></strong>
                         </td>
-                        <td><?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_heim)?></td>
+                        <td class="align-l p-l-20">
+                            <div> <?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_heim)?> </div>
+                            <div><?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_gast)?></div>
+                        </td>
                         <td>
                             <b><?=$db->tore_heim?> : <?=$db->tore_gast?></b>
                             <?=$spielinfo?>
                         </td>
-                        <td><?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_gast)?></td>
+
                     </tr>
                     <?php
                 endwhile;
@@ -204,10 +210,9 @@ require_once "../../templates/header.php";
 ?>
             <table class="table table-bordered paarungen shadow_box">
                 <tr class="mobile-center">
-                    <td>Info<br>
-                    <td>HEIM</td>
+                    <td>Info</td>
+                    <td class="align-l p-l-20">Spielpaarung</td>
                     <td>Erg.</td>
-                    <td>GAST</td>
                 </tr>
                 <?php
                 $query = mysqli_query($connection,"SELECT turnierspiele_id, spieltag, team_heim, team_gast, tore_heim, tore_gast, spielort, datum FROM b_spiele WHERE turniere_id = '$turniere_id' AND gruppe = '$gruppe' ORDER BY spieltag ASC");
@@ -225,12 +230,22 @@ require_once "../../templates/header.php";
                             <strong><?=$db->spielort?></strong><br>
                             # <strong><?=$db->turnierspiele_id?></strong>
                         </td>
-                        <td><?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_heim)?></td>
-                        <td>
-                            <b><?=$db->tore_heim?> : <?=$db->tore_gast?></b>
-                            <?=$spielinfo?>
+                        <td class="align-l p-l-20">
+                            <div>
+                                <?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_heim)?>
+                            </div>
+                            <div>
+                                <?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_gast)?>
+                            </div>
                         </td>
-                        <td><?=getTurnierteamVonTurnierteamID($turniere_id,$db->team_gast)?></td>
+                        <td>
+                            <div>
+                                <b><?=$db->tore_heim?></b>
+                            </div>
+                            <div>
+                                <b><?=$db->tore_gast?></b>
+                            </div>
+                        </td>
                     </tr>
                     <?php
                 endwhile;

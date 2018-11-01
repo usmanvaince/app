@@ -1,0 +1,28 @@
+.mobile-center {
+  td {
+    background-color: #ffd200 !important;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.kurztabelle {
+   font-size: 14px;
+}
+
+.paarungen {
+  tr {
+    td {
+      font-size: 15px !important;
+    }
+    &:nth-child(odd) {
+      td {
+        background: #ebebeb;
+        &:first-child {
+          background: #333 !important;
+        }
+      }
+    }
+  }
+}
+
