@@ -1,0 +1,45 @@
+/*
+     Drop Down Menues
+   */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #494949;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  &:hover, &:focus {
+
+  }
+  span {
+    float: left;
+    color: #fff;
+    font: 15px 'Neo Sans W02 Medium', 'Helvetica', sans-seri;
+    font-weight: bold;
+  }
+}
+.custom_dropDown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #494949 ;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      background-color: #ddd
+    }
+  }
+}
+
+.show {display:block;}

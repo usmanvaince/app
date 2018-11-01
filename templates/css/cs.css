@@ -1,0 +1,225 @@
+body {
+    font-family: BrandonTextWeb-Regular;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: BrandonTextWeb-Regular;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+.navbar-default .navbar-toggle {
+    color: #FFF !important;
+}
+
+.btn-primary {
+    color: #333;
+    text-shadow: none;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+
+.kurztabelle {
+    position: relative;
+    background-color: #FFF !important;
+    border: 1px solid #e2e2e2 !important;
+}
+
+.kurztabelle h2 {
+    color: #333;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.kurztabelle .btn {
+    position: absolute;
+    right: 10px;
+}
+
+.kurztabelle tr {
+    background-color: #FFF;
+    border-bottom: 1px solid #212121;
+}
+
+.kurztabelle tr td {
+    border: none !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.kurztabelle tr:first-of-type {
+    background-color: #ffca00;
+    border-bottom: none;
+}
+
+.kurztabelle tr:first-of-type td {
+    border-color: #ffca00;
+}
+
+.kurztabelle tr:nth-of-type(2),
+.kurztabelle tr:nth-of-type(3) {
+    background-color: #e0e0e0;
+}
+
+.kurztabelle tr td:first-of-type {
+    text-align: center;
+    font-weight: bold;
+}
+
+.kurztabelle tr td:nth-of-type(3),
+.kurztabelle tr td:nth-of-type(4) {
+    text-align: center;
+}
+
+.kurztabelle.detail tr td:nth-of-type(5),
+.kurztabelle.detail tr td:nth-of-type(6) {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .kurztabelle {
+
+    }
+    .table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
+        white-space: normal;
+    }
+
+    .paarungen tr td:nth-of-type(2),
+    .paarungen tr td:nth-of-type(4) {
+        word-wrap: break-word;
+    }
+
+    .detailseite {
+
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+    .table {
+        font-size: 12px !important;
+    }
+}
+
+.paarungen {
+    border: none !important;
+}
+
+.paarungen h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.paarungen tr {
+    border-bottom: 1px solid #212121 !important;
+}
+
+.paarungen tr td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background-color: #FFF;
+    border: none !important;
+}
+
+.paarungen tr:nth-of-type(2n) td {
+    background-color: #e3e3e3;
+}
+
+.paarungen tr td:first-of-type {
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+}
+
+.paarungen tr:first-of-type td {
+    background-color: #ffca00;
+    color: #333;
+    font-weight: bold;
+    border:none !important;
+}
+
+.paarungen tr td:nth-of-type(1) {
+    width: 50px !important;
+    min-width: 50px !important;
+    padding-left: 4px !important;
+}
+
+.paarungen tr td:nth-of-type(2) {
+    text-align: right;
+}
+
+.paarungen tr td:nth-of-type(3) {
+    text-align: center;
+    min-width: 50px !important;
+    width: 50px !important;
+}
+
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 20px !important;
+    }
+    .table>tbody>tr>td {
+        padding: 3px;
+    }
+
+
+
+}
+
+/*.container {
+    background-color: #FFF;
+}*/
+
+.content-wrapper {
+    background-color: transparent;
+    background-image: none;
+}
+
+.navbar > .container {
+    background-color: #000;
+}
+
+.detailseite .paarungen {
+    margin-bottom: 30px !important;
+}
+
+.detailseite h2 {
+    margin: 20px auto;
+}
+
+.siegertreppchen {
+    text-align: center;
+}
+
+.siegertreppchen tr:first-of-type td:first-of-type {
+    background-color: #999;
+    border-top: 35px solid #FFF;
+    width: 33.3%;
+}
+
+.siegertreppchen tr:first-of-type td:nth-of-type(2) {
+     background-color: #ffca00;
+    height: 100px;
+    width: 33.3%;
+ }
+
+.siegertreppchen tr:first-of-type td:nth-of-type(3) {
+    background-color: #eee;
+    border-top: 70px solid #FFF;
+    width: 33.3%;
+}
+

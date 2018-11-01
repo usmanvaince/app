@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} app.esport-event\.de [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://app.esport-event.de/$1 [R,L]
+
+
+
+

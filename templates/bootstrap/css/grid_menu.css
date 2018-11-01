@@ -1,0 +1,26 @@
+@media screen and (max-width:767px){
+	.grid-menu {
+		padding: 10px 30px;
+		width: 100%;
+	}
+	.grid-menu [class*="col-"] {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-size: 1em;
+		text-align: center;
+		line-height: 2;
+	}
+}
+@media screen and (min-width:768px){
+	.grid-menu {
+		padding: 10px 30px;
+		width: 900px;
+	}
+	.grid-menu [class*="col-"] {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-size: 1em;
+		text-align: center;
+		line-height: 2;
+	}
+}

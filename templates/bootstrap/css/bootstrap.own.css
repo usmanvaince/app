@@ -1,0 +1,41 @@
+.full {
+/*	background: url("http://www.turniere.bayreuther-jungs.de//images/background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;*/
+}
+
+a[disabled="disabled"] {
+	pointer-events: none;
+}
+
+/* Panel Tab Navigation */
+.panel.with-nav-tabs .panel-heading{
+    padding: 0 0 0 0;
+}
+.panel.with-nav-tabs .nav-tabs{
+	border-bottom: 1px solid #FFF;
+}
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #ffca00;
+}
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #FFF;
+	background-color: #222;
+	border-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+	color: #FFF;
+	background-color: #ffca00;
+	border-color: #FFF;
+	border-bottom-color: transparent;
+}

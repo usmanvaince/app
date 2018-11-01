@@ -1,0 +1,203 @@
+#loader {
+    background-color: rgb(137,218,241);
+    width:100vw;
+    height: 100vh;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#loader svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -35px;
+    z-index: 9999;
+}
+
+.vw_slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.vw_slider ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vw_slider .slide {
+    width: 100%;
+}
+
+.vw_slider .slide .inner {
+    position: relative;
+}
+
+.vw_slider ul.slider_navigation {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    left: 50%;
+}
+
+.vw_slider ul.slider_navigation li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    background: transparent;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.vw_slider ul.slider_navigation li:hover,
+.vw_slider ul.slider_navigation li.active {
+    background: #FFF;
+}
+
+/* STYLE 1 */
+.vw_slider.style_1 .slide {
+    width: 100%;
+    position: absolute;
+}
+
+.vw_slider.style_1 ul.slider_navigation li {
+    border: 1px solid #FFF;
+}
+
+.vw_slider.style_1 ul.slider_navigation li:hover,
+.vw_slider.style_1 ul.slider_navigation li.active {
+    background: #FFF;
+}
+
+.vw_slider.style_1 .slider_content {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.vw_slider.style_1 .slider_content .inner p {
+
+}
+
+.vw_slider.style_1 .slider_content .inner a.more_button {
+
+}
+
+.vw_slider.style_1 .slider_content .inner a.more_button svg {
+
+}
+
+.vw_slider.style_1 .slider_content .inner a.more_button span {
+
+}
+
+.vw_slider.style_1 ul.slides li {
+    width: 100vw !important;
+}
+
+/* STYLE 2 */
+.vw_slider.style_2 .slide {
+    width: 100%;
+    position: absolute;
+}
+
+.vw_slider.style_2 .previous,
+.vw_slider.style_2 .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -28px;
+    cursor: pointer;
+}
+
+.vw_slider.style_2 .previous {
+    left: 20px;
+}
+
+.vw_slider.style_2 .next {
+    right: 20px;
+}
+
+.vw_slider.style_2 ul.slider_navigation li {
+    border: 1px solid #BBB;
+}
+
+.vw_slider.style_2 ul.slider_navigation li:hover,
+.vw_slider.style_2 ul.slider_navigation li.active {
+    background: #BBB;
+}
+
+.vw_slider.style_2 .slider_content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(218,244,251);
+    padding-right: 50px;
+}
+
+.vw_slider.style_2 .slider_content .inner > span {
+    background-color: #FFF;
+    display: inline-block;
+    padding: 7px 10px;
+}
+
+.vw_slider.style_2 .slider_content .inner h3 {
+    margin: 15px 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.vw_slider.style_2 .slider_content .inner p {
+    color: #000;
+}
+
+.vw_slider.style_2 .slider_content .inner a.more_button {
+    display: inline-block;
+    padding: 10px 15px 10px 35px;
+    background-color:rgb(137,218,241);
+    position: relative;
+}
+
+.vw_slider.style_2 .slider_content .inner a.more_button svg {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+}
+
+.vw_slider.style_2 .slider_content .inner a.more_button span {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #start_slider .slide {
+        overflow-x: hidden;
+    }
+
+    #start_slider .slide > .inner > img {
+        height: 300px;
+        width: auto !important;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    #start_slider .slide > .inner > img {
+        height: 450px;
+        width: auto !important;
+    }
+
+}

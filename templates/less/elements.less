@@ -1,0 +1,41 @@
+.button {
+  margin-bottom: 7px;
+  .transition;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-right: 8px;
+  display: inline-block;
+  &:hover {
+    background: #FFF;
+    color: @dark-grey;
+  }
+  &.black {
+    border-color: @black;
+    color: @black;
+    &:hover {
+      background: @black;
+      color: @primary-color;
+    }
+  }
+}
+
+.delimiter {
+  width: 180px;
+  margin-bottom: 20px;
+  border-bottom: 10px solid @primary-color;
+}
+
+.btn-primary {
+  color: #333;
+  text-shadow: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
