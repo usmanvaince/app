@@ -292,6 +292,7 @@
     tr{
       td {
         font-size: 13px;
+        font-family: 'BrandonTextWeb-Regular' !important;
       }
     }
   }
@@ -309,7 +310,21 @@
       }
     }
   }
-
+  #home_latest_event {
+    .container {
+       margin-left: 10px !important;
+    }
+    .event_date {
+      margin-top: 10px !important;
+      font-size: 14px !important;
+    }
+  }
+  section.content h2 {
+    font-size: 17px !important;
+  }
+  .paarungen > h2 {
+    margin-left: 10px !important;
+  }
 
 }
 
